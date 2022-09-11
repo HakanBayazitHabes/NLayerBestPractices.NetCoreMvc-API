@@ -1,13 +1,7 @@
 ﻿
 using Microsoft.EntityFrameworkCore;
 using NLayer.Core.Models;
-using NLayer.Repository.Configurations;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace NLayer.Repository
 {
@@ -24,7 +18,7 @@ namespace NLayer.Repository
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //ApplyConfigurationsFromAssembly Bulunduğumuz assembliy deki dosyaları alır
-            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly ( ) );
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             //Tek Tek vermek istediğimişz de bu şekilde veirrz
             //modelBuilder.ApplyConfiguration(new ProductConfiguration())
 
@@ -49,7 +43,7 @@ namespace NLayer.Repository
 
 
 
-            base.OnModelCreating(modelBuilder); 
+            base.OnModelCreating(modelBuilder);
         }
     }
 }
